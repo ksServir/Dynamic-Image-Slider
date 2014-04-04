@@ -1,0 +1,219 @@
+
+/*
+
+html, body{
+
+	font-size:12px;
+
+	font-family: 'Cantarell', arial, serif;
+
+	color:#555555;
+
+	margin-left:120px;
+
+}
+
+body{
+
+	margin-top:40px;
+
+}
+
+.normal_p{
+
+	width:600px;
+
+}
+
+
+
+h1, h2, p{
+
+	margin:0px;
+
+	padding:0px;
+
+	font-family: Cantarell, arial, serif;
+
+}
+
+
+
+h2{
+
+	color:#888888;
+
+	font-size:12px;
+
+}
+
+
+
+h3{
+
+	color:#000000;
+
+	font-size:16px;
+
+	border-left: 10px solid red;
+
+	padding-left: 15px;
+
+}
+
+
+
+p{
+
+	margin-bottom:10px;
+
+	margin-top:10px;
+
+}
+
+*/
+
+.the_red{
+
+	color:red;
+
+}
+
+
+
+
+
+.border_p{
+
+	overflow:scroll;
+
+	border:1px solid #888888;
+
+	width:600px;
+
+}
+
+
+
+.two_galleries, .two_galleries2{
+
+	float:left;
+
+}
+
+
+
+.two_galleries .ba_door{
+
+	border-left:1px solid #ff0000;
+
+}
+
+
+
+.two_galleries .ba_footer{
+
+	height:22px;
+
+	position:relative;
+
+	top:-27px;
+
+}
+
+
+
+
+
+.two_galleries .ba_btn_prev, .two_galleries .ba_btn_next{
+
+	position:absolute;
+
+	right:4px;
+
+	height:22px;
+
+	background-color:#0000ff;
+
+	cursor:pointer;
+
+	
+
+	width:30px;	
+
+	background:url('../graphics/footer_alternate.png') no-repeat -30px 0px;
+
+}
+
+
+
+.two_galleries .ba_btn_prev{
+
+	width:30px;	
+
+	right:35px;
+
+	background:url('../graphics/footer_alternate.png') no-repeat 0px 0px;
+
+}
+
+
+
+.two_galleries .ba_info_bg_l{
+
+	height:inherit;
+
+	width:9px;
+
+	background:url('../graphics/footer_alternate_2.png') no-repeat 0px 0px;
+
+	float:left;
+
+}
+
+.two_galleries .ba_info_bg_r{
+
+	height:inherit;
+
+	width:9px;
+
+	background:url('../graphics/footer_alternate_2.png') no-repeat -50px 0px;
+
+	float:left;
+
+}
+
+.two_galleries .ba_info_text{
+
+	height:inherit;
+
+	width:90%;
+
+	background:url('../graphics/footer_alternate_22.png') repeat-x;
+
+	float:left;
+
+	padding-top:2px;
+
+	padding-left:2px;
+
+	color:#ffffff;
+
+}
+
+
+
+
+
+.two_galleries .ba_mask{
+
+	position:relative;
+
+	overflow:hidden;
+
+	border:0px;
+
+	background:url('../graphics/preloader3.gif') no-repeat 50% 50%;
+
+}
+

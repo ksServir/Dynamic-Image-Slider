@@ -1,9 +1,3 @@
-Dynamic-Image-Slider
-====================
-
-Dynamic Image Slider and embedded iFrame Generator
-
-
 
 
 Image Slider iFrame Generater (Early Alpha)	March 25th, 2014
@@ -84,4 +78,3 @@ Tested
 Comments, Suggestions, Bugs?
 Kris.Stanton@nasa.gov	Or	KrisStanton@gmail.com	
 	
-

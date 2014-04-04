@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider iFrame Designer</title>
+<script>
+function refreshTextArea()
+{
+	
+	var imageTitle = document.getElementById("txtImageTitle").value;
+	var imageWidth = document.getElementById("txtImageWidth").value;//500;
+	var imageHeight = document.getElementById("txtImageHeight").value; //400;
+	var imageLeftURL = document.getElementById("txtLeftImageURL").value;
+	var imageRightURL = document.getElementById("txtRightImageURL").value;
+	
+	
+	var iframeWidth = (1 * imageWidth) + 2;
+	var iframeHeight = (1 * imageHeight) + 13;
+	
+	var srcBuilder = "";
+	srcBuilder += "https://www.servirglobal.net/MapSupport/Slider/GetSlider.ashx";
+	srcBuilder += "?imgWidth=" + imageWidth;
+	srcBuilder += "&imgHeight=" + imageHeight;
+	srcBuilder += "&leftImgSrc=" + imageLeftURL;
+	srcBuilder += "&rightImgSrc=" + imageRightURL;
+	srcBuilder += "&imgTitle=" + encodeURIComponent(imageTitle);
+	//srcBuilder = encodeURIComponent(srcBuilder);
+	
+	
+	var iframeText = "";
+	iframeText += "<iframe src=\"" + srcBuilder + "\" ";
+	iframeText += "width=\"" + iframeWidth + "\" ";
+	iframeText += "height=\"" + iframeHeight + "\" ";
+	iframeText += "style=\"border:0px;\" scrolling=\"no\" frameborder=\"0\" ></iframe>";
+	document.getElementById("textarea_iframeCode").value = iframeText;
+	
+	// Build Preview
+	var wrapperHTML = "";
+	//wrapperHTML += "<fieldset><legend>Preview of, '"+imageTitle+"'<legend>";
+	wrapperHTML += "Preview of, '"+imageTitle+"'<br />";
+	wrapperHTML += iframeText;
+	//wrapperHTML += "</fieldset>";
+	document.getElementById("divPreview").innerHTML = wrapperHTML;
+	
+	try
+	{
+		document.getElementById("span_UnsavedChanges").style.setProperty("display","none");
+	}
+	catch(err)
+	{
+		// Firefox
+		try
+		{
+			document.getElementById("span_UnsavedChanges").setAttribute("style", "background-color:#eee; color:red;display:none;");
+		}
+		catch(errr){}
+	}
+	
+}
+function somethingChanged()
+{
+	try
+	{
+		document.getElementById("span_UnsavedChanges").style.setProperty("display","block");
+	}
+	catch(err)
+	{
+		// Firefox
+		try
+		{
+			document.getElementById("span_UnsavedChanges").setAttribute("style", "background-color:#eee; color:red;display:block;");
+		}
+		catch(errr)
+		{}
+	}
+}
+
+</script>
+</head>
+<body onload="refreshTextArea()">
+<br />
+Image Slider iFrame Builder (Alpha)
+<br /> <br /> 
+Change values in the fields below to construct an embeddable iframe of an image slider.
+<br />
+<br />
+<table>
+	<tr><td>Image Title :</td><td><input size="50" type="text" id="txtImageTitle" name="txtImageTitle" value="DefaultTitle" onchange="somethingChanged();"></td></tr>
+	<tr><td>Image Width :</td><td><input size="10" type="text" id="txtImageWidth" name="txtImageWidth" value="668" onchange="somethingChanged();"></td></tr>
+	<tr><td>Image Height :</td><td><input size="10" type="text" id="txtImageHeight" name="txtImageHeight" value="347" onchange="somethingChanged();"></td></tr>
+	<tr><td>Left Image Source URL :</td><td><input size="90" type="text" id="txtLeftImageURL" name="txtLeftImageURL" value="https://www.servirglobal.net/MapSupport/Slider/images/gt_pacaya_2014_v3temp.jpg" onchange="somethingChanged();"></td></tr>
+	<tr><td>Right Image Source URL :</td><td><input size="90" type="text" id="txtRightImageURL" name="txtRightImageURL" value="https://www.servirglobal.net/MapSupport/Slider/images/gt_pacaya_2014_v3.jpg" onchange="somethingChanged();"></td></tr>
+</table>
+<br />
+
+
+<br />
+<br />
+Embedded iFrame Code<br />
+<textarea id="textarea_iframeCode" rows="8" cols="100" type="text" value="unset">
+</textarea>
+<br />
+<button type="button" onClick="refreshTextArea()">Update Embedded iFrame Code</button>
+<br />
+<span id="span_UnsavedChanges" style="background-color:#eee; color:red;" >Outdated iFrame Code (Click 'Update Embedded iFrame Code')</span>
+<br />
+
+<br /><hr /><br />
+
+<div style="text-align:center;width:100%;">
+<div id="divPreview">
+Preview
+</div>
+</div>
+
+<br /><hr /><br />
+
+</body>
+</html>

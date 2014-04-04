@@ -1,0 +1,247 @@
+
+.ba_gallery{
+
+	position:relative;
+
+	margin-right:20px;
+
+	margin-bottom:20px;
+
+	font-size:14px;
+
+	font-family: 'Cuprum', arial, serif;
+
+	color:#555555;
+
+	width:500px;
+
+}
+
+
+
+
+
+
+
+.ba_gallery img{
+
+	margin:0px;
+
+	padding:0px;
+
+	position:absolute;
+
+	display:block;
+
+}
+
+
+
+.ba_gallery > img{
+
+	position:relative;
+
+	display:inline;
+
+}
+
+
+
+.ba_container{
+
+	position:relative;
+
+}
+
+
+
+.ba_mask{
+
+	position:relative;
+
+	overflow:hidden;
+
+	border:1px solid #444444;
+
+	background:url('../graphics/preloader3.gif') no-repeat 50% 50%;
+
+}
+
+
+
+.ba_footer{
+
+	position:relative;
+
+	height:22px;
+
+	top:-11px;
+
+}
+
+
+
+.ba_item{
+
+	float:left;
+
+	overflow:hidden;
+
+	position:relative;
+
+}
+
+
+
+.ba_info{
+
+	position:absolute;
+
+	left:10px;
+
+	float:left;
+
+	width:70%;
+
+	height:inherit;
+
+}
+
+
+
+.ba_info_bg_l{
+
+	height:inherit;
+
+	width:9px;
+
+	background:url('../graphics/footer.png') no-repeat 0px 0px;
+
+	float:left;
+
+}
+
+.ba_info_bg_r{
+
+	height:inherit;
+
+	width:9px;
+
+	background:url('../graphics/footer.png') no-repeat -50px 0px;
+
+	float:left;
+
+}
+
+.ba_info_text{
+
+	height:inherit;
+
+	width:90%;
+
+	background:url('../graphics/footer_text_bg.png') repeat-x;
+
+	float:left;
+
+	padding-top:2px;
+
+	padding-left:2px;
+
+}
+
+
+
+
+
+.ba_btn_prev, .ba_btn_next{
+
+	position:absolute;
+
+	right:10px;
+
+	height:22px;
+
+	background-color:#0000ff;
+
+	cursor:pointer;
+
+	
+
+	width:30px;	
+
+	background:url('../graphics/footer.png') no-repeat -30px 0px;
+
+}
+
+
+
+.ba_btn_prev{
+
+	width:30px;	
+
+	right:40px;
+
+	background:url('../graphics/footer.png') no-repeat 0px 0px;
+
+}
+
+
+
+.ba_controller {
+
+	position:absolute !important;
+
+	width:36px;
+
+	height:16px;
+
+	background-image:url('../graphics/before_after_controller.png');
+
+	cursor:pointer;
+
+}
+
+
+
+.ba_door {
+
+	position:absolute;
+
+	overflow:hidden;
+
+	border-left:1px solid white;
+
+}
+
+
+
+.ba_wall {
+
+	position:absolute;
+
+	background-color:#ffffff;
+
+	background-color: "transparent";
+
+	opacity: 0;
+
+	filter: alpha(opacity = 1);
+
+
+
+	width:inherit;
+
+	height:inherit;
+
+	
+
+	-moz-user-select: none;
+
+    -khtml-user-select: none;
+
+	-webkit-user-drag: none;
+
+	cursor:pointer;
+
+}
+
